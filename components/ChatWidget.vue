@@ -20,6 +20,17 @@ const messages = ref<Message[]>([]);
 
 const usersTyping = ref<User[]>([]);
 
+const messagesForApi = computed(() => {
+  const lastMessagesCount = 2;
+
+  return messages.value
+    .map((message) => ({
+      role: message.userId,
+      content: message.text,
+    }))
+    .slice(lastMessagesCount); // Only keep the last 2 messages
+});
+
 async function handleNewMessage(message: Message) {
   messages.value.push(message);
   usersTyping.value.push(bot.value);
@@ -28,12 +39,7 @@ async function handleNewMessage(message: Message) {
     const response: OpenAI.Chat.ChatCompletion = await $fetch("/api/ai", {
       method: "POST",
       body: {
-        messages: [
-          {
-            role: "user",
-            content: message.text,
-          },
-        ],
+        messages: messagesForApi.value,
       },
     });
 
