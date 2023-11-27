@@ -13,6 +13,7 @@ export default defineEventHandler(async (event) => {
       model: "gpt-3.5-turbo",
       messages: body.messages || [],
       temperature: body.temperature || 1,
+      max_tokens: 1000,
     });
 
     // TODO: tidy up
