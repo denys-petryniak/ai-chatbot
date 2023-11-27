@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { OpenAI } from "openai";
 import type { Message, User } from "~~/types";
 
 const me = ref<User>({
@@ -6,6 +7,7 @@ const me = ref<User>({
   avatar: "/avatar.jpg",
   name: "You",
 });
+
 const bot = ref<User>({
   id: "assistant",
   avatar: "/bot.jpg",
@@ -18,10 +20,38 @@ const messages = ref<Message[]>([]);
 
 const usersTyping = ref<User[]>([]);
 
-// send messages to Chat API here
-// and in the empty function below
+async function handleNewMessage(message: Message) {
+  messages.value.push(message);
+  usersTyping.value.push(bot.value);
 
-async function handleNewMessage(message: Message) {}
+  try {
+    const response: OpenAI.Chat.ChatCompletion = await $fetch("/api/ai", {
+      method: "POST",
+      body: {
+        messages: [
+          {
+            role: "user",
+            content: message.text,
+          },
+        ],
+      },
+    });
+
+    if (!response?.choices[0]?.message?.content) return;
+
+    const botMessage = {
+      id: response.id,
+      userId: bot.value.id,
+      createdAt: new Date(),
+      text: response.choices[0].message.content,
+    };
+
+    messages.value.push(botMessage);
+    usersTyping.value = [];
+  } catch (error) {
+    console.error("Error handling new message:", error);
+  }
+}
 </script>
 <template>
   <ChatBox

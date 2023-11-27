@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { nanoid } from "nanoid";
 import type { Message, User } from "~~/types";
+
 const props = withDefaults(
   defineProps<{
     messages: Message[];
