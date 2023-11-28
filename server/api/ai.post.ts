@@ -6,7 +6,7 @@ async function getAgentData(agent: string, body: Record<string, any>) {
     throw new Error(`${agent} doesn't exist`);
   }
 
-  // @ts-expect-error chaking above that agent exists
+  // @ts-expect-error checking above that agent exists
   const agentResult = agents[agent](body);
 
   return {
