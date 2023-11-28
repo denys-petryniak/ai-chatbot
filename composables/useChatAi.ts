@@ -1,9 +1,5 @@
-import type { Agent } from "@/agents";
-/**
- * This composables is a base composable
- * meant to be extended by specific soical platform composables
- */
-import type { AsyncState } from "@/types";
+import type { Agent } from "~/agents";
+import type { AsyncState } from "~/types";
 import type OpenAI from "openai";
 
 export const useChatAi = ({ agent }: { agent: Agent }) => {
@@ -21,16 +17,18 @@ export const useChatAi = ({ agent }: { agent: Agent }) => {
     try {
       state.value = "loading";
 
-      const result = await fetchWithTimeout<OpenAI.Chat.Completions.ChatCompletion>(
-        `/api/ai`,
-        {
-          method: "POST",
-          body: {
-            ...options,
-            agent,
-          },
-        }
-      );
+      const result =
+        await fetchWithTimeout<OpenAI.Chat.Completions.ChatCompletion>(
+          `/api/ai`,
+          {
+            method: "POST",
+            body: {
+              ...options,
+              agent,
+            },
+          }
+        );
+
       if (!result.choices || !result.usage) {
         throw new Error("Invalid AI response");
       }
