@@ -24,3 +24,14 @@ Host: '127.0.0.1'
     }
   ]
 }
+
+###
+
+POST http://localhost:3000/api/ai
+Content-Type: application/json
+Host: '127.0.0.1'
+
+{
+  "agent": "facebookAgent", 
+  "url": "https://vueschool.io/articles/vuejs-tutorials/creating-your-own-router/"
+}

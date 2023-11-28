@@ -7,7 +7,6 @@ export * from "./twitterAgent";
 export type Agent = "facebook" | "twitter" | "customerSupport";
 
 // util function for creating trainings with proper typing
-
 import type { OpenAI } from "openai";
 export default function createAgent(
   agent: (
