@@ -24,7 +24,7 @@ export const useChatAi = ({ agent }: { agent: Agent }) => {
             method: "POST",
             body: {
               ...options,
-              agent,
+              agent: `${agent}Agent`,
             },
           }
         );

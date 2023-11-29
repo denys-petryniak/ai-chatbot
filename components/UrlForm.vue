@@ -4,6 +4,7 @@ const props = defineProps<{
   temperature: number;
 }>();
 defineEmits(["submit"]);
+
 const form = reactive({
   url: props.url,
   temperature: props.temperature,
