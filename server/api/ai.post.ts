@@ -45,13 +45,8 @@ export default defineEventHandler(async (event) => {
       messages: messages ?? [],
     };
 
-    console.log("Request parameters:", params.temperature);
-
     const chatCompletion: OpenAI.Chat.ChatCompletion =
       await openai.chat.completions.create(params);
-
-    // TODO: tidy up
-    console.log("Chat completion response:", chatCompletion.choices[0].message);
 
     return chatCompletion;
   } catch (error) {

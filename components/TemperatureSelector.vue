@@ -9,17 +9,17 @@ defineEmits<{
 <template>
   <input
     :value="modelValue"
+    type="range"
+    max="1"
+    min="0"
+    step=".1"
+    class="w-full range range-secondary"
     @input="
       $emit(
         'update:modelValue',
         Number(($event.target as HTMLInputElement).value)
       )
     "
-    max="1"
-    min="0"
-    step=".1"
-    type="range"
-    class="w-full range range-secondary"
   />
   Temperature: {{ modelValue }}
   <span class="font-bold" v-if="modelValue >= 0.5">

@@ -11,13 +11,13 @@ const form = reactive({
 });
 </script>
 <template>
-  <form @submit.prevent="$emit('submit', form)" class="mb-10">
+  <form class="mb-10" @submit.prevent="$emit('submit', form)">
     <div class="flex mb-2">
       <input
-        placeholder="Full Article URL"
         v-model="form.url"
-        class="input input-bordered rounded-r-none w-full max-w-full"
         type="text"
+        placeholder="Full Article URL"
+        class="input input-bordered rounded-r-none w-full max-w-full"
       />
       <button class="btn rounded-l-none">Generate Announcements</button>
     </div>

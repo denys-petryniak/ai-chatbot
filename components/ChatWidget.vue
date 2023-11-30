@@ -60,7 +60,7 @@ async function handleNewMessage(message: Message) {
     :me="me"
     :users="users"
     :messages="messages"
-    @new-message="handleNewMessage"
     :usersTyping="usersTyping"
+    @new-message="handleNewMessage"
   />
 </template>

@@ -34,7 +34,6 @@ defineProps<{
         <Markdown :source="message?.text" class="w-full" />
       </slot>
     </div>
-    <!-- <div class="chat-footer opacity-50">Delivered</div> -->
   </div>
 </template>
 <style scoped>
