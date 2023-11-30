@@ -29,6 +29,7 @@ function getUser(id: string) {
 const input = ref();
 watch(open, () => {
   if (!open.value) return;
+
   nextTick(() => {
     (input.value as HTMLInputElement).focus();
   });
@@ -96,7 +97,6 @@ watch(
           :user="getUser(message.userId)"
           :my-message="message.userId === me.id"
         />
-
         <ChatBubble v-for="user in usersTyping" :key="user.id" :user="user">
           <AppLoading />
         </ChatBubble>

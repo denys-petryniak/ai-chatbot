@@ -27,7 +27,9 @@ const postURL = computed(
       </div>
       <div class="flex gap-2">
         <button class="btn btn-neutral" @click="generate">Regenerate</button>
-        <a :href="postURL" class="btn btn-primary" target="_blank">Post</a>
+        <NuxtLink :to="postURL" class="btn btn-primary" target="_blank"
+          >Post</NuxtLink
+        >
       </div>
     </div>
   </CardGeneric>

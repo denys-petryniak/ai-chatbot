@@ -26,8 +26,8 @@ function post() {
 <template>
   <CardGeneric title="Facebook" :state="state" :body="announcement">
     <button class="btn btn-neutral" @click="generate">Regenerate</button>
-    <a class="btn btn-primary" target="_blank" @click.prevent="post">
+    <button class="btn btn-primary" target="_blank" @click.prevent="post">
       Copy Announcement and Post
-    </a>
+    </button>
   </CardGeneric>
 </template>

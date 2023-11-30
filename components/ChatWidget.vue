@@ -55,6 +55,7 @@ async function handleNewMessage(message: Message) {
   }
 }
 </script>
+
 <template>
   <ChatBox
     :me="me"

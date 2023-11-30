@@ -10,6 +10,7 @@ const form = reactive({
   temperature: props.temperature,
 });
 </script>
+
 <template>
   <form class="mb-10" @submit.prevent="$emit('submit', form)">
     <div class="flex mb-2">
