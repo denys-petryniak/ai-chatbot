@@ -1,6 +1,6 @@
 # Social Media Post Generator
 
-![image](https://github.com/denys-petryniak/ai-social-media-post-generator/assets/16530588/2413676b-9f10-4442-8aba-785f35c4a67a)
+![image](https://github.com/denys-petryniak/ai-social-media-post-generator/assets/16530588/c4ee103e-02bd-46a8-b4a3-de8deef15f5a)
 
 # Nuxt 3 Minimal Starter
 
