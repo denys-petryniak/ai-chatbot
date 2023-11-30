@@ -1,4 +1,4 @@
-# Social Media Post Generator
+# AI Social Media Post Generator
 
 ![image](https://github.com/denys-petryniak/ai-social-media-post-generator/assets/16530588/c4ee103e-02bd-46a8-b4a3-de8deef15f5a)
 

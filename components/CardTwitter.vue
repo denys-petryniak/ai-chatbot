@@ -20,12 +20,7 @@ const postURL = computed(
 </script>
 
 <template>
-  <CardGeneric
-    title="Twitter"
-    :state="state"
-    :body="announcement"
-    class="mb-10"
-  >
+  <CardGeneric title="Twitter" :state="state" :body="announcement">
     <div class="w-full flex justify-between items-center">
       <div class="text-xs">
         Character Count: <strong>{{ announcement?.length }}</strong>
