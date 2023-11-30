@@ -1,3 +1,7 @@
+# Social Media Post Generator
+
+![image](https://github.com/denys-petryniak/ai-social-media-post-generator/assets/16530588/2413676b-9f10-4442-8aba-785f35c4a67a)
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
