@@ -12,7 +12,7 @@ const form = reactive({
 </script>
 <template>
   <form @submit.prevent="$emit('submit', form)" class="mb-10">
-    <div class="flex">
+    <div class="flex mb-2">
       <input
         placeholder="Full Article URL"
         v-model="form.url"
