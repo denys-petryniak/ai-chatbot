@@ -9,6 +9,7 @@ defineProps<{
   myMessage?: boolean;
 }>();
 </script>
+
 <template>
   <div
     class="chat"
@@ -37,6 +38,7 @@ defineProps<{
     </div>
   </div>
 </template>
+
 <style scoped>
 :deep(code) {
   background: none;

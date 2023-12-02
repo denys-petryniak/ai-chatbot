@@ -17,7 +17,7 @@ async function handleImport(e: typeof form.value) {
 
 <template>
   <h1 class="text-4xl my-10">AI Social Media Post Generator</h1>
-  <UrlForm v-bind="form" @submit="handleImport"></UrlForm>
+  <UrlForm v-bind="form" @submit="handleImport" />
   <div>
     <CardTwitter ref="twitterCard" v-bind="form" />
     <CardFacebook ref="facebookCard" v-bind="form" />

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { nanoid } from "nanoid";
-import type { Message, User } from "~~/types";
+import type { Message, User } from "~/types";
 
 const props = withDefaults(
   defineProps<{
@@ -47,6 +47,7 @@ watch(
   { deep: true }
 );
 </script>
+
 <template>
   <div class="fixed bottom-[10px] right-[10px]">
     <button v-show="!open" @click="open = true" class="bg-blue-500 p-3 rounded">

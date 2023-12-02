@@ -3,6 +3,7 @@ const props = defineProps<{
   url: string;
   temperature: number;
 }>();
+
 defineEmits(["submit"]);
 
 const form = reactive({
@@ -20,7 +21,9 @@ const form = reactive({
         placeholder="Full Article URL"
         class="input input-bordered rounded-r-none w-full max-w-full"
       />
-      <button class="btn rounded-l-none">Generate Announcements</button>
+      <button type="submit" class="btn rounded-l-none">
+        Generate Announcements
+      </button>
     </div>
     <TemperatureSelector v-model="form.temperature" />
   </form>
