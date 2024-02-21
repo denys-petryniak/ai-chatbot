@@ -2,7 +2,9 @@
 
 ![image](https://github.com/denys-petryniak/ai-social-media-post-generator/assets/16530588/6dd255c3-632a-4a8a-baf6-995f2fade15b)
 
-# Nuxt 3 Minimal Starter
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/denys-petryniak/ai-social-media-post-generator)
+
+## Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
